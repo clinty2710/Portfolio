@@ -1,0 +1,579 @@
+/*
+    
+Clint Steadman
+    
+default.css
+
+*/
+
+/* variables for css ----------------------------------------------------------------------------------------*/
+:root{
+	/*--mainColor:#eaeaea;*/
+	/*--secondaryColor:#fff;*/
+
+	--borderColor:#c1c1c1;
+
+	--mainText: white;
+	--secondaryText:white;
+
+	--themeDotBorder:white;
+
+	--previewBg:rgb(25, 39, 52, 0.8);
+	--previewShadow:#111921;
+
+	--buttonColor: green;
+
+	--defaultBackgroundImage: url('images/bluegrid2.png'); /* Vecteezy.com */
+
+
+}
+
+/* base Arcade Clint page with background image -------------------------------------------------------------*/
+@font-face {
+	font-family: "Arcade Normal";
+	src: url('/Users/clinty2710/Library/Fonts/ARCADE_N.TTF') format('TrueType');
+}
+
+body.landing-page {
+	background-image: url('images/stretchedarcaV3.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	overflow: hidden;
+	font-family: "Arcade Normal", Times, Serif;
+	color: white;
+  }
+
+.header {
+	font-family: "Arcade Normal", Times, Serif;
+    color: purple;
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the scrollable content area with padding -----------------------------------------------------*/
+.body {
+    position: fixed;
+    top: 170px; 
+    left: 155px; 
+    right: 155px; 
+    bottom: 118px; 
+    overflow: hidden; 
+    padding: 15px;
+	background-image: var(--defaultBackgroundImage);
+	background-size: 100% 100%;
+}
+
+.post-body {
+    position: relative;
+	font-family: "Arcade Normal", Times, Serif;
+	color: white;
+}
+
+.post-body::before {
+    content: "";
+    background-image: url('images/bluegrid.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+
+/* Style the footer at the bottom ----------------------------------------------------------------------*/
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    height: 100px; 
+    padding: 10px;
+    text-align: center;
+}
+
+.joystick {
+    max-width: 100px; 
+	height: 150px;
+    position: fixed;
+    left: 23.2%; 
+    bottom: 30px;
+}
+
+.tilted-joystick {
+	display: none;
+    width: 100px;
+    height: 150px;
+    position: fixed;
+    left: 22%; 
+    bottom: 28px; 
+}
+
+
+/* Arcade Screen Tag Styles --------------------------------------------------------------------------------*/
+
+html, body{
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+body *{
+	transition: 0.3s;
+}
+
+
+h1, h2, h3, h4, h5, h6, strong{
+	color: var(--mainText);
+	font-weight: 300;
+}
+
+p, li, span, label, input, textarea{
+	color: var(--secondaryText);
+}
+
+a{
+	text-decoration: none;
+	color:#17a2b8;
+}
+
+ul{
+	list-style: none;
+}
+
+h1 { font-size: 45px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+
+.s1{
+	background-color: var(--mainColor);
+	overflow:auto;
+}
+
+.s2{
+	background-color: var(--secondaryColor);
+	border-bottom: 5px dashed var(--borderColor);
+	overflow:auto;
+}
+
+
+.main-container{
+	width: 1000px;
+	margin: 0 auto;
+
+}
+
+/* Name Title --------------------------------------------------------------------------------------------*/
+.greeting-wrapper {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+    margin: 0; 
+}
+
+.space-invader-wrapper {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 5px 5px 0 5px;
+	margin-top: -60px;
+	margin-bottom: 50px;
+}
+
+.browser-image {
+    height: 22px;
+    width: 20px;
+    margin: 5px;
+}
+
+
+.intro-wrapper{
+	background-color: var(--secondaryColor);
+	border: 5px dashed var(--borderColor);
+	border-radius:5px 5px 0 0;
+
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		'nav-wrapper nav-wrapper'
+		'left-column right-column'
+	;
+}
+
+/* Nav bar and intro wrapper/theme buttons -------------------------------------------------------------------*/
+.nav-wrapper{
+	border-radius:5px 5px 0 0;
+	grid-area:nav-wrapper;
+	border-bottom: 1.5px dashed var(--borderColor);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--mainColor);
+}
+
+#navigation a{
+	color:var(--mainText);
+}
+
+
+#navigation{
+	margin:0;
+	padding: 10px;
+}
+
+#navigation li{
+	display: inline-block;
+	margin-right: 5px;
+	margin-left:5px;
+}
+
+.space-invader-wrapper-2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px;
+}
+
+.browser-image-3 {
+    height: 80px;
+    width: 100px;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.space-invader-wrapper-3 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.browser-image-2 {
+    height: 45px;
+    width: 60px;
+    margin: 5px;
+    margin-top: 50px;
+}
+
+
+.left-column{
+	grid-area: left-column;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+#profile_pic{
+	display: block;
+	margin:0 auto;
+
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	border:2px solid var(--borderColor);
+}
+
+
+#theme-options-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.theme-dot{
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	border-radius: 50%;
+
+	margin: 5px;
+	border:2px solid var(--themeDotBorder);
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	cursor: pointer;
+}
+
+
+.theme-dot:hover{
+	border-width: 5px;
+}
+
+
+#default-mode{
+	background-color: #002999;
+}
+
+#black-mode{
+	background-color: black;
+}
+
+#green-mode{
+	background-color: #005D3B;
+}
+
+#purple-mode{
+	background-color: #5921AC;
+}
+
+#settings-note{
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
+.right-column {
+    grid-area: right-column;
+    display: grid;
+    align-content: start;
+    padding-top: 95px; 
+    padding-bottom: 50px;
+}
+
+
+#preview-shadow{
+	background-color: var(--previewShadow);
+	max-width: 300px;
+	height: 200px;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#preview{
+	width: 300px;
+	border: 2px dashed #17a2b8;
+	background-color: var(--previewBg);
+	padding: 15px;
+	position: relative;
+}
+
+.corner{
+	width:20px;
+	height: 20px;
+	position: absolute;
+}
+
+#corner-tl{
+	top:-5px;
+	left: -5px
+}
+
+#corner-tr{
+	top:-5px;
+	right: -5px
+}
+
+#corner-br{
+	bottom:-5px;
+	right: -5px
+}
+
+#corner-bl{
+	bottom:-5px;
+	left: -5px
+}
+
+/* About me/skills section and Social media -------------------------------------------------------------------*/
+.about-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	padding-bottom: 50px;
+	padding-top: 50px;
+	gap:100px;
+}
+
+hr {
+    border: none;
+    border-top: 5px dashed var(--borderColor);
+}
+
+#skills{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--previewShadow);
+	padding-right: 40px;
+	padding-top: 15px;
+}
+
+.social-links{
+	display: grid;
+	align-content: center;
+	text-align: center;
+}
+
+#social_img{
+	width: 100%;
+	border:2px solid var(--borderColor);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center; /* Vertically center the icons */
+	justify-content: center;
+	gap: 50px;
+}
+
+/* Past Projects Section ---------------------------------------------------------------------------------*/
+.post-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 320px);
+	gap:20px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.post{
+	border: 1.5px solid var(--borderColor);
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+}
+
+.thumbnail{
+	display: block;
+	width: 100%;
+	height:180px;
+	object-fit: cover;
+}
+
+.post-preview{
+	background-color: #fff;
+	padding:15px;
+}
+
+.post-title{
+	color:black;
+	margin: 0;
+}
+
+.post-intro{
+	color:#4b5156;
+	font-size: 14px;
+}
+
+/* Contact Form and end of page -----------------------------------------------------------------------*/
+#contact-form{
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	border: 5px dashed var(--borderColor);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: var(--mainColor);
+	margin-bottom: 50px;
+
+}
+
+#contact-form label{
+	line-height: 2.7em;
+}
+
+#contact-form textarea{
+	min-height: 100px;
+	font-size: 14px;
+}
+
+
+.input-field{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom:10px;
+	color: black;
+	background-color: #eaeaea;
+	border-radius: 5px;
+	border:1px solid var(--borderColor);
+	font-size: 14px;
+}
+
+
+#submit-btn{
+	font-family: "Arcade Normal", Times, Serif;
+	margin-top: 10px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom:10px; 
+	color: #fff;
+	background-color: var(--buttonColor);
+	border:none;
+}
+
+#space-ship {
+    width: 100px; 
+    display: block;
+    margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+/* @media actions ----------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1200px){
+	.main-container{
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.intro-wrapper{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			'nav-wrapper'
+			'left-column'
+			'right-column'
+		;
+	}
+
+	.right-column{
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+	#preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	#preview{
+		width: 280px;
+
+	}
+
+}
+
+@media screen and (max-width: 925px) {
+	.body {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  padding: 0;
+	  margin: 0;
+	}
+  }
+  
+  @media screen and (max-width: 925px) {
+    .joystick {
+        display: none;
+    }
+}

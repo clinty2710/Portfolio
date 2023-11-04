@@ -1,0 +1,28 @@
+/*
+    
+Clint Steadman
+    
+black.css
+
+*/
+
+:root{
+	/*--mainColor:#15202B;*/
+	/*--secondaryColor:#192734;*/
+
+	--borderColor: #17a2b8;
+
+	--mainText: antiquewhite;
+	--secondaryText:#17a2b8;
+
+	--themeDotBorder:#17a2b8;
+
+	--previewBg:rgb(25, 39, 52, 0.8);
+	--previewShadow: rgb(62, 62, 62);
+
+
+	--buttonColor: purple;
+	--defaultBackgroundImage: url('images/blackgrid.png'); /* Vecteezy.com */
+
+
+}
