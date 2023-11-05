@@ -34,16 +34,43 @@ default.css
 	src: url('/Users/clinty2710/Library/Fonts/ARCADE_N.TTF') format('TrueType');
 }
 
-body.landing-page {
-	background-image: url('images/stretchedarcaV3.png');
+html {
+	background-image: url(images/smallarcade.png);
+	background-color: #020434;
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	overflow: hidden;
-	font-family: "Arcade Normal", Times, Serif;
-	color: white;
-  }
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+}
+.transition-container {
+    background: transparent; /* Remove the background image from the body */
+    overflow: hidden;
+    font-family: "Arcade Normal", Times, Serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+.background-image {
+    background-image: url('images/stretchedarcaV3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+}
 
 .header {
 	font-family: "Arcade Normal", Times, Serif;
@@ -149,46 +176,31 @@ body.landing-page {
 }
 
 /* CSS for page transition -----------------------------------------------------------------------------*/
-.page {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: transform 0.5s, opacity 0.5s;
-	transform: scale(1);
-	opacity: 1;
-	display: none;
-  }
-  
-  .page.active {
-	display: block;
-	transform: scale(1);
-	opacity: 1;
-	transition: transform 0.5s, opacity 0.5s;
-  }
-  
-  .page.active.incoming {
-	transform: scale(0.8);
-	opacity: 0;
-  }
-  
-  .page.zoom-in {
-	transform: scale(1);
-	opacity: 1;
-	transition: transform 0.5s, opacity 0.5s;
-	display: block;
-	z-index: 1;
-  }
-  
-  .page.zoom-out {
-	transform: scale(0.8);
-	opacity: 0;
-	z-index: 0;
-	display: block;
-	position: absolute;
-  }
-  
+
+/* CSS for page transition */
+.transition-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+
+    animation: zoomIn 0.5s ease-in-out; /* Animation for zooming in */
+    animation-fill-mode: forwards; /* Ensure the final state is maintained */
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.5); /* Start with zoomed-in effect */
+        opacity: 0; /* Fully transparent initially */
+    }
+    100% {
+        transform: scale(1); /* Scale back to original size */
+        opacity: 1; /* Fully opaque at the end */
+    }
+}
+
 
 /* Style the footer at the bottom ----------------------------------------------------------------------*/
 .footer {
@@ -625,6 +637,28 @@ hr {
 }
 
 /* @media actions ----------------------------------------------------------------------------------------*/
+@keyframes zoomIn {
+	0% {
+	  transform: scale(0.1);
+	  opacity: 0;
+	}
+	100% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes zoomOut {
+	0% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(0.1);
+	  opacity: 0;
+	}
+  }
+
 @media screen and (max-width: 1200px){
 	.main-container{
 		width: 95%;

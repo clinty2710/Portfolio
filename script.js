@@ -32,13 +32,25 @@ document.addEventListener('DOMContentLoaded', function() {
         redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
         redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
 
-        setTimeout(function () {
-            window.location.href = 'landingpage.html';
-        }, 500); // Redirect to landingpage.html after .5 second
+        // Replace the following line to match the path to your landing page
+        performPageTransition('landingpage.html');
     }
 
     redButtonUp.addEventListener('click', handleRedButtonUpClick);
 });
+
+// Function to perform the page transition
+function performPageTransition(toPage) {
+    const transitionContainer = document.querySelector('.transition-container');
+
+    // Add a class to the container to trigger the animation
+    transitionContainer.classList.add('zoomed');
+
+    // After the animation finishes, load the new page
+    setTimeout(() => {
+        window.location.href = toPage;
+    }, 500); // Adjust the delay (in milliseconds) to match your animation duration
+}
 
 console.log("It's working");
 
