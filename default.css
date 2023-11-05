@@ -388,65 +388,90 @@ h6 { font-size: 16px;}
 }
 
 
-.left-column{
-	grid-area: left-column;
-	padding-top:50px;
-	padding-bottom: 50px;
+.left-column {
+    grid-area: left-column;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-#profile_pic{
-	display: block;
-	margin:0 auto;
-
-	height: 200px;
-	width: 200px;
-	object-fit: cover;
-	border:2px solid var(--borderColor);
+.profile-pics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
 }
 
-
-#theme-options-wrapper{
-	display: flex;
-	justify-content: center;
+.profile_pic {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+    position: relative;
+    z-index: 2;
 }
 
-.theme-dot{
-	height: 30px;
-	width: 30px;
-	background-color: black;
-	border-radius: 50%;
-
-	margin: 5px;
-	border:2px solid var(--themeDotBorder);
-
-	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-
-	cursor: pointer;
+#image-hover {
+    transition: opacity 1s;
+    position: relative;
+    z-index: 3;
 }
 
-
-.theme-dot:hover{
-	border-width: 5px;
+#image-hover:hover {
+    opacity: 0;
 }
 
-
-#default-mode{
-	background-color: #002999;
+#bottom-image {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#black-mode{
-	background-color: black;
+h5 {
+    line-height: 1;
 }
 
-#green-mode{
-	background-color: #005D3B;
+#theme-options-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-#purple-mode{
-	background-color: #5921AC;
+.theme-dot {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid var(--themeDotBorder);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
 }
+
+.theme-dot:hover {
+    border-width: 5px;
+}
+
+#default-mode {
+    background-color: #002999;
+}
+
+#black-mode {
+    background-color: black;
+}
+
+#green-mode {
+    background-color: #005D3B;
+}
+
+#purple-mode {
+    background-color: #5921AC;
+}
+
 
 #settings-note{
 	font-size: 12px;
