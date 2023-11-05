@@ -1,3 +1,45 @@
+/*
+    
+Clint Steadman
+    
+script.js
+
+*/
+
+// Press Start image rotation
+document.addEventListener('DOMContentLoaded', function() {
+    var image1 = document.getElementById('image1');
+    var image2 = document.getElementById('image2');
+    
+    var images = [image1, image2];
+    var currentIndex = 0;
+
+    function showNextImage() {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.display = 'block';
+    }
+
+    setInterval(showNextImage, 500); // 500 milliseconds (0.5 seconds)
+});
+
+// Red Start Button transition
+document.addEventListener('DOMContentLoaded', function() {
+    var redButtonUp = document.getElementById('redButtonUp');
+    var redButtonDown = document.getElementById('redButtonDown');
+
+    function handleRedButtonUpClick() {
+        redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
+        redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
+
+        setTimeout(function () {
+            window.location.href = 'landingpage.html';
+        }, 500); // Redirect to landingpage.html after .5 second
+    }
+
+    redButtonUp.addEventListener('click', handleRedButtonUpClick);
+});
+
 console.log("It's working");
 
 let theme = localStorage.getItem('theme');
