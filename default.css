@@ -87,6 +87,108 @@ body.landing-page {
     bottom: 0;
     z-index: -1; 
 }
+/* Style for index.html --------------------------------------------------------------------------------*/
+
+#index {
+    background-image: url('images/smallarcade.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #222;
+    height: 100vh;
+}
+
+/* Styles for the centered content */
+.index-centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+
+/* Styles for the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    top: -100px;
+}
+
+.image-container img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 15px 0 0 1%;
+}
+
+/* Styles for the RedButton images */
+.red-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25px; /* Vertical positioning */
+
+    /* Maintain RedButton position */
+    position: absolute;
+    bottom: 0;
+    left: 50.4%;
+    transform: translateX(-50%);
+}
+
+.red-button-container .red-button {
+    max-width: 30%;
+    height: auto;
+    margin: 10px;
+}
+
+.red-button-container #redButtonDown {
+    display: none;
+}
+
+/* CSS for page transition -----------------------------------------------------------------------------*/
+.page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s, opacity 0.5s;
+	transform: scale(1);
+	opacity: 1;
+	display: none;
+  }
+  
+  .page.active {
+	display: block;
+	transform: scale(1);
+	opacity: 1;
+	transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .page.active.incoming {
+	transform: scale(0.8);
+	opacity: 0;
+  }
+  
+  .page.zoom-in {
+	transform: scale(1);
+	opacity: 1;
+	transition: transform 0.5s, opacity 0.5s;
+	display: block;
+	z-index: 1;
+  }
+  
+  .page.zoom-out {
+	transform: scale(0.8);
+	opacity: 0;
+	z-index: 0;
+	display: block;
+	position: absolute;
+  }
+  
 
 /* Style the footer at the bottom ----------------------------------------------------------------------*/
 .footer {
@@ -575,5 +677,17 @@ hr {
   @media screen and (max-width: 925px) {
     .joystick {
         display: none;
+    }
+}
+
+/* Media Query for index.html smaller viewport width */
+@media (max-width: 880px) {
+    .image-container img {
+        max-width: 33%; /* Allow "Press Start" images to resize to fit the viewport */
+        margin: 15px 0;
+    }
+
+    .red-button-container {
+        top: 0px; /* Adjust the vertical position if needed */
     }
 }

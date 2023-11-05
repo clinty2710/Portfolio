@@ -6,5 +6,65 @@ index.html
 
 -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>Clint's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body id="index">
+    <div class="index-centered-content">
+        <div class="image-container">
+            <img src="images/PressStart1.png" alt="Press Start" id="image1">
+            <img src="images/PressStart2.png" alt="Press Start 2" id="image2">
+        </div>
+        <div class="red-button-container">
+            <img src="images/RedButtonUp.png" alt="Red Button Up" id="redButtonUp" class="red-button">
+            <img src="images/RedButtonDown.png" alt="Red Button Down" id="redButtonDown" class="red-button">
+        </div>
+        
+    </div>
+    <!-- JavaScript code for image rotation -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var image1 = document.getElementById('image1');
+            var image2 = document.getElementById('image2');
+            
+            var images = [image1, image2];
+            var currentIndex = 0;
+
+            function showNextImage() {
+                images[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.display = 'block';
+            }
+
+            setInterval(showNextImage, 500); // 500 milliseconds (0.5 seconds)
+        });
+    </script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        var redButtonUp = document.getElementById('redButtonUp');
+        var redButtonDown = document.getElementById('redButtonDown');
+
+        function handleRedButtonUpClick() {
+            redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
+            redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
+        }
+
+        function handleRedButtonDownClick() {
+            redButtonUp.style.display = 'block'; // Show RedButtonUp
+            redButtonDown.style.display = 'none'; // Hide RedButtonDown when clicked
+        }
+
+        redButtonUp.addEventListener('click', handleRedButtonUpClick);
+        redButtonDown.addEventListener('click', handleRedButtonDownClick);
+    });
+
+    </script>
+</body>
+</html>
+
