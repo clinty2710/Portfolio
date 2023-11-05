@@ -19,13 +19,12 @@ index.html
     <div class="index-centered-content">
         <div class="image-container">
             <img src="images/PressStart1.png" alt="Press Start" id="image1">
-            <img src="images/PressStart2.png" alt="Press Start 2" id="image2">
+            <img src="images/PressStart2.png" alt="Press Start 2" id="image2" style="display: none;">
         </div>
         <div class="red-button-container">
             <img src="images/RedButtonUp.png" alt="Red Button Up" id="redButtonUp" class="red-button">
-            <img src="images/RedButtonDown.png" alt="Red Button Down" id="redButtonDown" class="red-button">
+            <img src="images/RedButtonDown.png" alt="Red Button Down" id="redButtonDown" class="red-button" style="display: none;">
         </div>
-        
     </div>
     <!-- JavaScript code for image rotation -->
     <script type="text/javascript">
@@ -46,25 +45,21 @@ index.html
         });
     </script>
     <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        var redButtonUp = document.getElementById('redButtonUp');
-        var redButtonDown = document.getElementById('redButtonDown');
+        document.addEventListener('DOMContentLoaded', function() {
+            var redButtonUp = document.getElementById('redButtonUp');
+            var redButtonDown = document.getElementById('redButtonDown');
 
-        function handleRedButtonUpClick() {
-            redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
-            redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
-        }
+            function handleRedButtonUpClick() {
+                redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
+                redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
 
-        function handleRedButtonDownClick() {
-            redButtonUp.style.display = 'block'; // Show RedButtonUp
-            redButtonDown.style.display = 'none'; // Hide RedButtonDown when clicked
-        }
+                setTimeout(function () {
+                    window.location.href = 'landingpage.html';
+                }, 1000); // Redirect to landingpage.html after 1 second
+            }
 
-        redButtonUp.addEventListener('click', handleRedButtonUpClick);
-        redButtonDown.addEventListener('click', handleRedButtonDownClick);
-    });
-
+            redButtonUp.addEventListener('click', handleRedButtonUpClick);
+        });
     </script>
 </body>
 </html>
-
