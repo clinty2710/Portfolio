@@ -31,7 +31,7 @@ default.css
 /* base Arcade Clint page with background image -------------------------------------------------------------*/
 @font-face {
 	font-family: "Arcade Normal";
-	src: url('/Users/clinty2710/Library/Fonts/ARCADE_N.TTF') format('TrueType');
+	src: url('fonts/ARCADE_N.TTF') format('TrueType');
 }
 
 html {
