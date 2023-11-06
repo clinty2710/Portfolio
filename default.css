@@ -35,7 +35,6 @@ default.css
 }
 
 html {
-	background-image: url(images/smallarcade.png);
 	background-color: #020434;
 	background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -298,14 +297,14 @@ h6 { font-size: 16px;}
     margin: 0; 
 }
 
-.space-invader-wrapper {
+/*.space-invader-wrapper {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    justify-content: center; 
+    align-items: center; 
     padding: 5px 5px 0 5px;
 	margin-top: -60px;
 	margin-bottom: 50px;
-}
+} */
 
 .browser-image {
     height: 22px;
@@ -338,7 +337,7 @@ h6 { font-size: 16px;}
 	grid-area:nav-wrapper;
 	border-bottom: 1.5px dashed var(--borderColor);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background-color: var(--mainColor);
 }
