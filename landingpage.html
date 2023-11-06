@@ -62,7 +62,7 @@
                         </ul>                  
                         <ul id="navigation">
                             <!-- Contact link in navigation -->
-                            <li><a href="landingpage.html#contact">Contact</a></li> 
+                            <li><a href="landingpage.html#contact-form">Contact</a></li> 
                         </ul>
                     </div>
     
@@ -270,7 +270,7 @@
                 <!--contact section -->
                 <h3 style="text-align: center;">Get In Touch</h3> 
                 <!-- Contact form -->
-                <form id="contact-form" method="post" action="">
+                <form id="contact-form" form action="https://formsubmit.co/clinty2710@hotmail.com" method="POST">
                     <label>Name</label>
                     <input class="input-field" type="text" name="name">
                     
@@ -279,6 +279,8 @@
                     
                     <label>Email</label>
                     <input class="input-field" type="text" name="email">
+                    <input type="hidden" name="_next" value="https://clintsteadman.s3.amazonaws.com/emailresponse.html">
+                    <input type="hidden" name="_subject" value="New Message!">
                     
                     <label>Message</label>
                     <textarea class="input-field" name="message"></textarea>
