@@ -742,12 +742,25 @@ hr {
 
 /* Media Query for index.html smaller viewport width */
 @media (max-width: 880px) {
+    .image-container {
+        flex-direction: column; /* Stack "Press Start" images vertically */
+        align-items: center; /* Center-align the images */
+    }
+
     .image-container img {
-        max-width: 33%; /* Allow "Press Start" images to resize to fit the viewport */
-        margin: 15px 0;
+        max-width: 80%; /* Adjust the maximum width to your preference */
+        margin: 15px 0; /* Add vertical margin for spacing */
     }
 
     .red-button-container {
-        top: 0px; /* Adjust the vertical position if needed */
+        position: relative; /* Reset the positioning to its default state */
+        top: 0; /* Reset the top position */
+        left: 0; /* Reset the left position */
+        transform: none; /* Reset the transform */
+    }
+
+    .red-button-container .red-button {
+        max-width: 80%; /* Adjust the maximum width to your preference */
+        margin: 10px; /* Add vertical margin for spacing */
     }
 }
