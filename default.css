@@ -169,7 +169,7 @@ html {
 .red-button-container .red-button {
     max-width: 35%;
     height: auto;
-    margin: 0;
+    margin: 10px;
 }
 
 .red-button-container #redButtonDown {
