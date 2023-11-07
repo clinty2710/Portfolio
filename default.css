@@ -743,11 +743,11 @@ hr {
 /* Media Query for index.html smaller viewport width */
 @media (max-width: 880px) {
     .image-container img {
-        max-width: 33%; /* Allow "Press Start" images to resize to fit the viewport */
+        max-width: 33%; 
         margin: 15px 0;
     }
 
     .red-button-container {
-        top: 0px; /* Adjust the vertical position if needed */
+        top: 20px; 
     }
 }
