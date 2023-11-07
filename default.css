@@ -748,6 +748,7 @@ hr {
     }
 
     .red-button-container {
-        top: 80px;
+        top: 75px;
+		max-width: 40%;
     }
 }
