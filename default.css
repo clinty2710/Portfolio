@@ -744,7 +744,7 @@ hr {
 @media (max-width: 720px) {
     .image-container img {
         max-width: 40%; 
-        margin: 15px 0;
+        margin: 20px 0;
     }
 
     .red-button-container {
