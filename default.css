@@ -157,19 +157,19 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 25px; /* Vertical positioning */
+    top: 25px; 
 
     /* Maintain RedButton position */
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50.4%;
     transform: translateX(-50%);
 }
 
 .red-button-container .red-button {
-    max-width: 30%;
+    max-width: 35%;
     height: auto;
-    margin: 10px;
+    margin: 0;
 }
 
 .red-button-container #redButtonDown {
@@ -750,5 +750,6 @@ hr {
     .red-button-container {
         top: 75px;
 		max-width: 80%;
+		height: auto;
     }
 }
