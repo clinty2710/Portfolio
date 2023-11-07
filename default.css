@@ -743,7 +743,7 @@ hr {
 /* Media Query for index.html smaller viewport width */
 @media (max-width: 880px) {
     .image-container img {
-        max-width: 33%; 
+        max-width: 50%; 
         margin: 15px 0;
     }
 
