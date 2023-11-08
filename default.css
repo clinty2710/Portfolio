@@ -87,24 +87,20 @@ img {
 }
 
 /* Style the scrollable content area with padding -----------------------------------------------------*/
+
+/* Default styles for .body and .content */
 .body {
     position: relative;
     overflow: hidden;
     padding: 0;
     margin: 35px 155px 100px 155px;
     background-image: var(--defaultBackgroundImage);
-    background-size: 100% 60%;
-	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 100%;
-}
-
-.content {
-    max-height: calc(100% - 20px); /* Adjust the value as needed to control the stopping point */
-    overflow-y: auto; /* Allow content to scroll within the max-height */
-	max-height: 433px; /* Change this value to the desired maximum height */
+    max-height: 430px;
     overflow-y: auto;
 }
-
 
 .post-body {
     position: relative;
@@ -734,7 +730,6 @@ hr {
     }
 }
 
-
 /* Media Query for screens with a maximum width of 925px */
 @media screen and (max-width: 925px) {
     .body {
@@ -742,9 +737,9 @@ hr {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
         padding: 0;
         margin: 0;
+        background-size: cover; /* Make the background image cover the screen */
     }
 
     .joystick {
@@ -752,7 +747,7 @@ hr {
     }
     
     .content {
-        max-height: 100vh;
+        max-height: 100vh; /* Ensure content fills the screen height */
         overflow-y: auto;
     }
 }
@@ -768,18 +763,6 @@ hr {
         top: 75px;
         max-width: 80%;
         height: auto;
-    }
-}
-
-/* Media Query for screens with a minimum width of 1400px */
-@media screen and (min-width: 1400px) {
-    .body {
-		position: relative;
-
-    }
-
-    .content {
-        position: relative;
     }
 }
 
