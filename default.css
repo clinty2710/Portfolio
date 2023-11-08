@@ -46,7 +46,14 @@ html {
     width: 100%;
     height: 100%;
     z-index: -1; /* Place it behind the content */
+	
 }
+
+img {
+    max-width: 100%; /* Prevent images from stretching beyond their container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
 .transition-container {
     background: transparent; /* Remove the background image from the body */
     overflow: hidden;
@@ -81,16 +88,23 @@ html {
 
 /* Style the scrollable content area with padding -----------------------------------------------------*/
 .body {
-    position: fixed;
-    top: 170px; 
-    left: 155px; 
-    right: 155px; 
-    bottom: 118px; 
-    overflow: hidden; 
-    padding: 15px;
-	background-image: var(--defaultBackgroundImage);
-	background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 35px 155px 100px 155px;
+    background-image: var(--defaultBackgroundImage);
+    background-size: 100% 60%;
+	background-repeat: no-repeat;
+    height: 100%;
 }
+
+.content {
+    max-height: calc(100% - 20px); /* Adjust the value as needed to control the stopping point */
+    overflow-y: auto; /* Allow content to scroll within the max-height */
+	max-height: 433px; /* Change this value to the desired maximum height */
+    overflow-y: auto;
+}
+
 
 .post-body {
     position: relative;
@@ -101,7 +115,7 @@ html {
 .post-body::before {
     content: "";
     background-image: url('images/bluegrid.png');
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -112,7 +126,6 @@ html {
     right: 0;
     bottom: 0;
     z-index: -1;
-	height: 100vh;
 }
 
 /* Style for index.html --------------------------------------------------------------------------------*/
@@ -664,92 +677,96 @@ hr {
 
 /* @media actions ----------------------------------------------------------------------------------------*/
 @keyframes zoomIn {
-	0% {
-	  transform: scale(0.1);
-	  opacity: 0;
-	}
-	100% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
-  
-  @keyframes zoomOut {
-	0% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-	100% {
-	  transform: scale(0.1);
-	  opacity: 0;
-	}
-  }
-
-@media screen and (max-width: 1200px){
-	.main-container{
-		width: 95%;
-	}
-}
-
-@media screen and (max-width: 800px){
-	.intro-wrapper{
-		grid-template-columns: 1fr;
-		grid-template-areas: 
-			'nav-wrapper'
-			'left-column'
-			'right-column'
-		;
-	}
-
-	.right-column{
-		justify-content: center;
-	}
-
-}
-
-@media screen and (max-width: 400px){
-	#preview-shadow{
-		max-width: 280px;
-		height: 180px;
-		padding-left: 10px;
-		padding-top: 10px;
-	}
-
-	#preview{
-		width: 280px;
-
-	}
-
-}
-
-@media screen and (max-width: 925px) {
-	.body {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  padding: 0;
-	  margin: 0;
-	}
-  }
-  
-  @media screen and (max-width: 925px) {
-    .joystick {
-        display: none;
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
-/* Media Query for index.html smaller viewport width */
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+/* Media Query for screens with a maximum width of 1200px */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
+
+/* Media Query for screens with a maximum width of 800px */
+@media screen and (max-width: 800px) {
+    .intro-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'nav-wrapper'
+            'left-column'
+            'right-column';
+    }
+
+    .right-column {
+        justify-content: center;
+    }
+}
+
+/* Media Query for screens with a maximum width of 400px */
+@media screen and (max-width: 400px) {
+    #preview-shadow {
+        max-width: 280px;
+        height: 180px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    #preview {
+        width: 280px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 925px */
+@media screen and (max-width: 925px) {
+    .body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-size: cover; /* Make the background image cover the screen */
+    }
+
+    .joystick {
+        display: none;
+    }
+    
+    .content {
+        max-height: 100vh; /* Ensure content fills the screen height */
+        overflow-y: auto;
+    }
+}
+
+/* Media Query for screens with a maximum width of 720px */
 @media (max-width: 720px) {
     .image-container img {
-        max-width: 40%; 
+        max-width: 40%;
         margin: 20px 0;
     }
 
     .red-button-container {
         top: 75px;
-		max-width: 80%;
-		height: auto;
+        max-width: 80%;
+        height: auto;
     }
 }
+
