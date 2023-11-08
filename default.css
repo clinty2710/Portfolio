@@ -66,6 +66,7 @@ img {
 
 .background-image {
     position: absolute;
+	transition-property: smooth;
     top: 0;
     left: 0;
     width: 100%;
@@ -91,6 +92,7 @@ img {
 /* Default styles for .body and .content */
 .body {
     position: absolute;
+	transition-property: smooth;
     overflow: hidden;
     padding: 0;
     margin: 35px 155px 100px 155px;
@@ -223,7 +225,7 @@ img {
     height: 100px; 
     padding: 10px;
     text-align: center;
-	z-index: 4;
+	z-index: 5;
 }
 
 .joystick {
