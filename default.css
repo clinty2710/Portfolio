@@ -772,14 +772,5 @@ hr {
 }
 
 /* Media Query for screens with a minimum width of 1400px */
-@media screen and (min-width: 1400px) {
-    .body {
-		position: relative;
-        margin: 50px; /* Adjust margins for the larger screen size */
-    }
 
-    .content {
-        max-height: calc(100% - 70px); /* Adjust the value as needed for larger screens */
-    }
-}
 
