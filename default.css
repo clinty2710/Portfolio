@@ -55,7 +55,7 @@ img {
 }
 
 .transition-container {
-    background: transparent; /* Remove the background image from the body */
+    background: transparent;
     overflow: hidden;
     font-family: "Arcade Normal", Times, Serif;
     color: white;
@@ -233,7 +233,6 @@ img {
 
 /* CSS for page transition -----------------------------------------------------------------------------*/
 
-/* CSS for page transition */
 .transition-container {
     position: fixed;
     top: 0;
@@ -694,7 +693,7 @@ hr {
 
 
 .input-field{
-	width: 97%;
+	width: 98.7%;
 	padding-top: 10px;
 	padding-bottom:10px;
 	color: black;
@@ -774,6 +773,17 @@ hr {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+      padding: 15px; /* Adjust the padding for smaller screens */
+    }
+    .row {
+      /* Adjust flex settings for smaller screens */
+      flex-wrap: wrap;
+    }
+    /* Add more specific styles for your elements to ensure they fit well on smaller screens */
+  }
+  
 /* Media Query for screens with a maximum width of 800px */
 @media screen and (max-width: 800px) {
     .intro-wrapper {
@@ -816,17 +826,28 @@ hr {
     }
 }
 
-/* Media Query for screens with a maximum width of 1200px */
-@media screen and (max-width: 1200px) {
-    .main-container {
-        width: 95%;
+/* Media Query for screens with a maximum width of 400px */
+@media screen and (max-width: 400px) {
+    .image-container img {
+        max-width: 100%; /* Allow the image to take full width */
+        margin: 20px 0;
+    }
+
+    .red-button-container {
+        top: 75px;
+        max-width: 100%; /* Allow the container to take full width */
+        height: auto;
+        position: relative; /* Remove absolute positioning */
+        left: auto;
+        transform: none;
     }
 }
 
-/* Media Query for screens with a minimum width of 1200px */
-@media screen and (min-width: 1200px) {
+/* Media Query for screens with a maximum width of 800px */
+@media screen and (max-width: 800px) {
     .main-container {
-        width: 1140px; /* Fixed width equivalent to 95% of 1200px */
-        margin: auto; /* Center the container */
+        width: 100%; /* Allow the container to take full width */
+        padding: 0px; /* Remove padding */
+        margin: 0;
     }
 }
