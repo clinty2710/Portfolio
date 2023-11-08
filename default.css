@@ -327,7 +327,6 @@ h4 { font-size: 24px;}
 h5 { font-size: 20px;}
 h6 { font-size: 16px;}
 
-
 .s1{
 	background-color: var(--mainColor);
 	overflow: auto;
@@ -335,10 +334,12 @@ h6 { font-size: 16px;}
 
 .s2{
 	background-color: var(--secondaryColor);
-	border-bottom: 5px dashed var(--borderColor);
 	overflow:auto;
 }
 
+.s3 {
+
+}
 
 .main-container {
     box-sizing: border-box;
@@ -374,11 +375,12 @@ h6 { font-size: 16px;}
 }
 
 
-.intro-wrapper{
+.intro-wrapper {
 	background-color: var(--secondaryColor);
 	border: 5px dashed var(--borderColor);
 	border-radius: 5px 5px 0 0;
-    margin: auto;
+    margin: 5px;
+    padding: 5px;
 
 
 	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -399,7 +401,7 @@ h6 { font-size: 16px;}
 	grid-area:nav-wrapper;
 	border-bottom: 1.5px dashed var(--borderColor);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background-color: var(--mainColor);
 }
