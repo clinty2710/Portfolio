@@ -740,17 +740,15 @@ hr {
         padding: 0;
         margin: 0;
         background-size: cover; /* Make the background image cover the screen */
+        max-height: 100vh; /* Ensure .body fills the screen height */
+        overflow-y: auto;
     }
 
     .joystick {
         display: none;
     }
-    
-    .content {
-        max-height: 100vh; /* Ensure content fills the screen height */
-        overflow-y: auto;
-    }
 }
+
 
 /* Media Query for screens with a maximum width of 720px */
 @media (max-width: 720px) {
