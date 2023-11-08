@@ -759,6 +759,23 @@ hr {
     }
 }
 
+/* Media Query for screens with a maximum width of 400px */
+@media screen and (max-width: 400px) {
+    .image-container img {
+        max-width: 100%; 
+        margin: 20px 0;
+    }
+
+    .red-button-container {
+        top: 75px;
+        max-width: 100%; 
+        height: auto;
+        position: relative; 
+        left: auto;
+        transform: none;
+    }
+}
+
 /* Media Query for screens with a maximum width of 720px */
 @media screen and (max-width: 720px) {
     .image-container img {
@@ -772,17 +789,6 @@ hr {
         height: auto;
     }
 }
-
-@media (max-width: 768px) {
-    .container {
-      padding: 15px; /* Adjust the padding for smaller screens */
-    }
-    .row {
-      /* Adjust flex settings for smaller screens */
-      flex-wrap: wrap;
-    }
-    /* Add more specific styles for your elements to ensure they fit well on smaller screens */
-  }
   
 /* Media Query for screens with a maximum width of 800px */
 @media screen and (max-width: 800px) {
@@ -797,8 +803,17 @@ hr {
     .right-column {
         justify-content: center;
         margin-top: -100px;
-        padding-bottom: 55px;
-        padding-right: 75px;
+        padding-bottom: 65px;
+        padding-right: 73px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 800px */
+@media screen and (max-width: 800px) {
+    .main-container {
+        width: 100%; 
+        padding: 0px; 
+        margin: 0;
     }
 }
 
@@ -826,28 +841,4 @@ hr {
     }
 }
 
-/* Media Query for screens with a maximum width of 400px */
-@media screen and (max-width: 400px) {
-    .image-container img {
-        max-width: 100%; /* Allow the image to take full width */
-        margin: 20px 0;
-    }
 
-    .red-button-container {
-        top: 75px;
-        max-width: 100%; /* Allow the container to take full width */
-        height: auto;
-        position: relative; /* Remove absolute positioning */
-        left: auto;
-        transform: none;
-    }
-}
-
-/* Media Query for screens with a maximum width of 800px */
-@media screen and (max-width: 800px) {
-    .main-container {
-        width: 100%; /* Allow the container to take full width */
-        padding: 0px; /* Remove padding */
-        margin: 0;
-    }
-}
