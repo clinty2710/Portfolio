@@ -772,5 +772,14 @@ hr {
 }
 
 /* Media Query for screens with a minimum width of 1400px */
+@media screen and (min-width: 1400px) {
+    .body {
+		position: relative;
 
+    }
+
+    .content {
+        position: relative;
+    }
+}
 
