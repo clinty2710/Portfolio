@@ -92,6 +92,7 @@ function setTheme(mode) {
     localStorage.setItem('theme', mode);
 }
 
+/*
 function enableScroll() {
     document.querySelector('.body').style.overflow = 'auto';
 }
@@ -99,6 +100,7 @@ function enableScroll() {
 function disableScroll() {
     document.querySelector('.body').style.overflow = 'hidden';
 }
+*/
 
 const joystick = document.querySelector('.joystick');
 const tiltedJoystick = document.getElementById('tilted-joystick');
