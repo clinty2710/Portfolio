@@ -133,7 +133,7 @@ img {
 
 /* Default styles for .body */
 .body {
-    position: relative;
+    position: absolute;
     flex: auto;
     padding: 0; /* No padding */
     margin: 0; /* No margin */
@@ -673,11 +673,10 @@ hr {
 /* Contact Form and end of page -----------------------------------------------------------------------*/
 #contact-form{
 	display: block;
-	max-width: 550px;
-    min-width: 100px;
+	max-width: 600px;
 	margin: 0 auto;
 	border: 5px dashed var(--borderColor);
-	padding: 0 auto;
+	padding: 15px;
 	border-radius: 5px;
 	background-color: var(--mainColor);
 	margin-bottom: 50px;
@@ -695,7 +694,7 @@ hr {
 
 
 .input-field{
-	width: 100%;
+	width: 98.5%;
 	padding-top: 10px;
 	padding-bottom:10px;
 	color: black;
@@ -709,7 +708,7 @@ hr {
 #submit-btn{
 	font-family: "Arcade Normal", Times, Serif;
 	margin-top: 10px;
-	width: 101%;
+	width: 100%;
 	padding-top: 10px;
 	padding-bottom:10px; 
 	color: #fff;
@@ -788,7 +787,8 @@ hr {
     .right-column {
         justify-content: center;
         margin-top: -100px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
+        padding-right: 50px;
     }
 }
 
