@@ -673,11 +673,11 @@ hr {
 /* Contact Form and end of page -----------------------------------------------------------------------*/
 #contact-form{
 	display: block;
-	max-width: 600px;
+	max-width: 550px;
     min-width: 100px;
-	margin: auto;
+	margin: 0 auto;
 	border: 5px dashed var(--borderColor);
-	padding: auto;
+	padding: 0 auto;
 	border-radius: 5px;
 	background-color: var(--mainColor);
 	margin-bottom: 50px;
