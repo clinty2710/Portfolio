@@ -342,7 +342,6 @@ h6 { font-size: 16px;}
 }
 
 .main-container {
-    box-sizing: border-box;
     width: 100%; 
     max-width: 100%;
     padding: 0 20px;
