@@ -722,7 +722,7 @@ hr {
 	margin-bottom: 40px;
 }
 
-/* @media actions ----------------------------------------------------------------------------------------*/
+/* @keyframes animations */
 @keyframes zoomIn {
     0% {
         transform: scale(0.1);
@@ -745,10 +745,31 @@ hr {
     }
 }
 
-/* Media Query for screens with a maximum width of 1200px */
-@media screen and (max-width: 1200px) {
-    .main-container {
-        width: 95%;
+/* Media Query for screens with a maximum width of 400px */
+@media screen and (max-width: 400px) {
+    #preview-shadow {
+        max-width: 280px;
+        height: 180px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    #preview {
+        width: 280px;
+    }
+}
+
+/* Media Query for screens with a maximum width of 720px */
+@media screen and (max-width: 720px) {
+    .image-container img {
+        max-width: 40%;
+        margin: 20px 0;
+    }
+
+    .red-button-container {
+        top: 75px;
+        max-width: 80%;
+        height: auto;
     }
 }
 
@@ -764,20 +785,6 @@ hr {
 
     .right-column {
         justify-content: center;
-    }
-}
-
-/* Media Query for screens with a maximum width of 400px */
-@media screen and (max-width: 400px) {
-    #preview-shadow {
-        max-width: 280px;
-        height: 180px;
-        padding-left: 10px;
-        padding-top: 10px;
-    }
-
-    #preview {
-        width: 280px;
     }
 }
 
@@ -804,17 +811,17 @@ hr {
     }
 }
 
-/* Media Query for screens with a maximum width of 720px */
-@media (max-width: 720px) {
-    .image-container img {
-        max-width: 40%;
-        margin: 20px 0;
-    }
-
-    .red-button-container {
-        top: 75px;
-        max-width: 80%;
-        height: auto;
+/* Media Query for screens with a maximum width of 1200px */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
     }
 }
 
+/* Media Query for screens with a minimum width of 1200px */
+@media screen and (min-width: 1200px) {
+    .main-container {
+        width: 1140px; /* Fixed width equivalent to 95% of 1200px */
+        margin: auto; /* Center the container */
+    }
+}
