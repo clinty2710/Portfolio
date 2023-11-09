@@ -195,7 +195,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 105vh;
     position: relative;
     top: -100px;
 }
@@ -217,7 +217,7 @@ img {
 
     /* Maintain RedButton position */
     position: absolute;
-    bottom: 20px;
+    bottom: -10px;
     left: 50.4%;
     transform: translateX(-50%);
 }
@@ -869,17 +869,22 @@ hr {
     }
 }
 
-@media screen and (max-width: 720px) {
+/* Media Query for screens with a maximum width of 600px */
+@media screen and (max-width: 600px) {
+    .image-container {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Center-align the elements */
+    }
+
     .image-container img {
-        position: relative;
-        max-width: 60%;
-        margin-top: -10px;
+        min-width: 40%; /* Adjust the image size as needed */
+        max-width: 40%;
     }
 
     .red-button-container {
-        top: 130px;
-        max-width: 100%;
+        top: 20px; /* Adjust the vertical position as needed */
+        min-width: 40%; /* Adjust the button size as needed */
+        max-width: 40%;
         height: auto;
     }
 }
-
