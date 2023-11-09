@@ -188,7 +188,7 @@ img {
     flex-direction: column; /* Stack the elements vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
-    height: 85vh;  /* Ensure the container takes up the full viewport height */
+    height: 80vh;  /* Ensure the container takes up the full viewport height */
 }
 
 /* Styles for the image container */
@@ -218,8 +218,6 @@ img {
     height: auto; /* Maintain aspect ratio */
     margin-top: -35px; /* Decrease the margin-top to move the red button further up */
 }
-
-
 
 
 /* CSS for page transition -----------------------------------------------------------------------------*/
