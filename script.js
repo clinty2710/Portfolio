@@ -4,6 +4,7 @@ Clint Steadman
     
 script.js
 
+Theme dot script - https://www.youtube.com/@DennisIvy
 */
 
 // Press Start image rotation
