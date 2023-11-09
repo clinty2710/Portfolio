@@ -784,10 +784,18 @@ hr {
         font-size: smaller;
     }
 
+    .left-column {
+        padding-right: 20px;
+    }
+
     #preview {
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 30px;
+    }
+
+    #contact-form {
+        padding: 20px;
     }
 }
 
