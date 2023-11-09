@@ -343,7 +343,7 @@ h6 { font-size: 16px;}
 .main-container {
     width: 100%; 
     max-width: 100%;
-    padding: 20px;
+    padding: 0px;
     margin: auto; 
     overflow-x: hidden;
   }
@@ -600,6 +600,10 @@ h5 {
 	gap:100px;
 }
 
+.about-me {
+    padding: 5px;
+}
+
 hr {
     border: none;
     border-top: 5px dashed var(--borderColor);
@@ -607,10 +611,11 @@ hr {
 
 #skills{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: start;
 	background-color: var(--previewShadow);
-	padding-right: 40px;
+    background-size: 100%;
 	padding-top: 15px;
+    padding: 5px;
 }
 
 .social-links{
