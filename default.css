@@ -801,17 +801,6 @@ hr {
 
 /* Media Query for screens with a maximum width of 720px */
 @media screen and (max-width: 720px) {
-    .image-container img {
-        max-width: 40%;
-        margin: 20px 0;
-    }
-
-    .red-button-container {
-        top: 75px;
-        max-width: 80%;
-        height: auto;
-    }
-
     #skills {
         background-color: var(--previewShadow);
     }
@@ -849,17 +838,6 @@ hr {
 
 /* Media Query for screens with a maximum width of 720px */
 @media screen and (max-width: 720px) {
-    .image-container img {
-        max-width: 40%;
-        margin: 20px 0;
-    }
-
-    .red-button-container {
-        top: 75px;
-        max-width: 80%;
-        height: auto;
-    }
-
     #skills {
         background-color: var(--previewShadow);
     }
@@ -901,5 +879,20 @@ hr {
     .main-container {
         width: 1140px; /* 95% of 1200px */
         margin: auto; /* Center the container */
+    }
+}
+
+/* red button and press start*/
+
+@media screen and (max-width: 720px) {
+    .image-container img {
+        max-width: 40%;
+        margin: 20px 0;
+    }
+
+    .red-button-container {
+        top: 75px;
+        max-width: 80%;
+        height: auto;
     }
 }
