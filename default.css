@@ -173,7 +173,7 @@ img {
 /* Style for index.html --------------------------------------------------------------------------------*/
 
 #index {
-    background-image: url('images/smallarcade.png');
+    background-image: url('images/smallarcadeV2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -182,44 +182,60 @@ img {
     overflow: hidden;
 }
 
-/* Styles for the centered content */
-.index-centered-content {
-    display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    height: 80vh;  /* Ensure the container takes up the full viewport height */
-}
-
-/* Styles for the image container */
-.image-container {
-    display: flex; /* Nested flex container */
-    flex-direction: column; /* Stack the images vertically */
-    align-items: center; /* Center horizontally within the image container */
-    margin-bottom: 10px; /* Add some spacing between image-container and red-button-container */
-}
-
 .image-container img {
-    max-width: 40%; /* Adjust the image size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Add spacing between images */
-}
-
-/* Styles for the RedButton images */
-.red-button-container {
-    display: flex; /* Nested flex container */
-    flex-direction: column; /* Stack the buttons vertically */
-    align-items: center; /* Center horizontally within the red-button container */
-    margin-top: 20px; /* Add some spacing between buttons and images */
+    position: fixed; /* Keep the position as fixed */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 .red-button-container .red-button {
-    max-width: 30%; /* Adjust the button size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: -35px; /* Decrease the margin-top to move the red button further up */
+    position: fixed; /* Keep the position as fixed */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 
+/* Styles for V1 of Press Start and Red Buttons 
+.index-centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;  
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.red-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.red-button-container .red-button {
+    max-width: 30%;
+    height: auto;
+    margin-top: -35px;
+}
+*/
 /* CSS for page transition -----------------------------------------------------------------------------*/
 
 .transition-container {
