@@ -185,52 +185,42 @@ img {
 /* Styles for the centered content */
 .index-centered-content {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    min-height: 100vh;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 85vh;  /* Ensure the container takes up the full viewport height */
 }
 
 /* Styles for the image container */
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 105vh;
-    position: relative;
-    top: -100px;
+    display: flex; /* Nested flex container */
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center horizontally within the image container */
+    margin-bottom: 10px; /* Add some spacing between image-container and red-button-container */
 }
 
 .image-container img {
-    max-width: 30%;
-    height: auto;
-    display: block;
-    margin: 15px 0 0 1%;
+    max-width: 40%; /* Adjust the image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Add spacing between images */
 }
 
 /* Styles for the RedButton images */
 .red-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 25px; 
-
-    /* Maintain RedButton position */
-    position: absolute;
-    bottom: -10px;
-    left: 50.4%;
-    transform: translateX(-50%);
+    display: flex; /* Nested flex container */
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center horizontally within the red-button container */
+    margin-top: 10px; /* Add some spacing between buttons and images */
 }
 
 .red-button-container .red-button {
-    max-width: 35%;
-    height: auto;
-    margin: 10px;
+    max-width: 30%; /* Adjust the button size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -35px; /* Decrease the margin-top to move the red button further up */
 }
 
-.red-button-container #redButtonDown {
-    display: none;
-}
+
+
 
 /* CSS for page transition -----------------------------------------------------------------------------*/
 
@@ -869,22 +859,3 @@ hr {
     }
 }
 
-/* Media Query for screens with a maximum width of 600px */
-@media screen and (max-width: 600px) {
-    .image-container {
-        flex-direction: column; /* Stack the elements vertically */
-        align-items: center; /* Center-align the elements */
-    }
-
-    .image-container img {
-        min-width: 40%; /* Adjust the image size as needed */
-        max-width: 40%;
-    }
-
-    .red-button-container {
-        top: 20px; /* Adjust the vertical position as needed */
-        min-width: 40%; /* Adjust the button size as needed */
-        max-width: 40%;
-        height: auto;
-    }
-}
