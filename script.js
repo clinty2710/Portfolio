@@ -116,4 +116,7 @@ tiltedJoystick.addEventListener('mouseleave', () => {
     joystick.style.display = 'block';
 });
 
-
+// JavaScript to prevent scrolling only for the body element with id "index"
+if (document.body.id === 'index' && window.innerWidth <= 768) {
+    document.body.style.overflow = 'hidden';
+}
