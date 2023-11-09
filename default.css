@@ -872,11 +872,11 @@ hr {
     .image-container img {
         position: relative;
         max-width: 60%;
-        margin-top: -50px;
+        margin-top: -10px;
     }
 
     .red-button-container {
-        top: 100px;
+        top: 130px;
         max-width: 100%;
         height: auto;
     }
