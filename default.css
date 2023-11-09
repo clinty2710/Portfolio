@@ -813,6 +813,10 @@ hr {
         padding: 0px; 
         margin: 0;
     }
+
+    #index {
+        background-image: url('images/smallarcade2.png');
+    }
 }
 
 @media screen and (max-width: 925px) {
