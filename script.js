@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         images[currentIndex].style.display = 'block';
     }
 
-    setInterval(showNextImage, 500); // 500 milliseconds (0.5 seconds)
+    setInterval(showNextImage, 500); // (0.5 seconds)
 });
 
 // Red Start Button transition
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         redButtonUp.style.display = 'none'; // Hide RedButtonUp when clicked
         redButtonDown.style.display = 'block'; // Show RedButtonDown when clicked
 
-        // Replace the following line to match the path to your landing page
         performPageTransition('landingpage.html');
     }
 
@@ -49,9 +48,10 @@ function performPageTransition(toPage) {
     // After the animation finishes, load the new page
     setTimeout(() => {
         window.location.href = toPage;
-    }, 500); // Adjust the delay (in milliseconds) to match your animation duration
+    }, 500); 
 }
 
+// system check and Theme Dots
 console.log("It's working");
 
 let theme = localStorage.getItem('theme');
@@ -92,6 +92,7 @@ function setTheme(mode) {
     localStorage.setItem('theme', mode);
 }
 
+// Joystick animations
 const joystick = document.querySelector('.joystick');
 const tiltedJoystick = document.getElementById('tilted-joystick');
 

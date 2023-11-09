@@ -3,7 +3,7 @@
 Clint Steadman
     
 default.css
-
+Most Code that is commented out is saved for implementation later
 */
 
 /* variables for css ----------------------------------------------------------------------------------------*/
@@ -45,13 +45,13 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place it behind the content */
+    z-index: -1;
 	
 }
 
 img {
-    max-width: 100%; /* Prevent images from stretching beyond their container */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
 .transition-container {
@@ -135,14 +135,14 @@ img {
 .body {
     position: absolute;
     flex: auto;
-    padding: 0; /* No padding */
-    margin: 0; /* No margin */
+    padding: 0; 
+    margin: 0; 
     background-image: var(--defaultBackgroundImage);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 100%; /* Full viewport height */
+    height: 100%; 
     width: 100%;
-    overflow-y: auto; /* If you want to allow vertical scrolling */
+    overflow-y: auto; 
 }
 
 /* Styles for .post-body */
@@ -150,8 +150,8 @@ img {
     position: relative;
     font-family: "Arcade Normal", Times, Serif;
     color: white;
-    width: 100%; /* Ensure it takes full width */
-    height: auto; /* Height can be auto to expand with content */
+    width: 100%; 
+    height: auto; 
 }
 
 /* Before pseudo-element for .post-body */
@@ -190,12 +190,12 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place the background image behind the content */
+    z-index: -1; 
 }
 
 
 .image-container img {
-    position: fixed; /* Keep the position as fixed */
+    position: fixed; 
     width: 100%;
     height: 100%;
     top: 0;
@@ -205,7 +205,7 @@ img {
 }
 
 .red-button-container .red-button {
-    position: fixed; /* Keep the position as fixed */
+    position: fixed; 
     width: 100%;
     height: 100%;
     top: 0;
@@ -260,18 +260,18 @@ img {
     bottom: 0;
     z-index: 9999;
 
-    animation: zoomIn 0.5s ease-in-out; /* Animation for zooming in */
-    animation-fill-mode: forwards; /* Ensure the final state is maintained */
+    animation: zoomIn 0.5s ease-in-out; 
+    animation-fill-mode: forwards; 
 }
 
 @keyframes zoomIn {
     0% {
-        transform: scale(1.5); /* Start with zoomed-in effect */
-        opacity: 0; /* Fully transparent initially */
+        transform: scale(1.5); 
+        opacity: 0; 
     }
     100% {
-        transform: scale(1); /* Scale back to original size */
-        opacity: 1; /* Fully opaque at the end */
+        transform: scale(1);
+        opacity: 1; 
     }
 }
 
@@ -650,7 +650,7 @@ hr {
 
 .social-icons {
     display: flex;
-    align-items: center; /* Vertically center the icons */
+    align-items: center; 
 	justify-content: center;
 	gap: 50px;
 }
@@ -857,8 +857,8 @@ hr {
         width: 100%;
         padding: 0;
         margin: 0;
-        background-size: 100% 100%; /* Make the background image cover the screen */
-        max-height: 100vh; /* Ensure .body fills the screen height */
+        background-size: 100% 100%; 
+        max-height: 100vh; 
         max-width: 100vw;
         overflow-y: auto;
     }
@@ -882,8 +882,8 @@ hr {
 /* Media Query for screens with a minimum width of 1200px */
 @media screen and (min-width: 1200px) {
     .main-container {
-        width: 1140px; /* 95% of 1200px */
-        margin: auto; /* Center the container */
+        width: 1140px; 
+        margin: auto; 
     }
 }
 
