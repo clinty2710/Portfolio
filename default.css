@@ -766,20 +766,6 @@ hr {
 
 /* Media Query for screens with a maximum width of 400px */
 @media screen and (max-width: 400px) {
-    .image-container img {
-        max-width: 100%; 
-        margin: 20px 0;
-    }
-
-    .red-button-container {
-        top: 75px;
-        max-width: 100%; 
-        height: auto;
-        position: relative; 
-        left: auto;
-        transform: none;
-    }
-
     .nav-wrapper {
         font-size: smaller;
     }
@@ -882,17 +868,17 @@ hr {
     }
 }
 
-/* red button and press start*/
-
 @media screen and (max-width: 720px) {
     .image-container img {
-        max-width: 40%;
-        margin: 20px 0;
+        position: relative;
+        max-width: 60%;
+        margin-top: -50px;
     }
 
     .red-button-container {
-        top: 75px;
-        max-width: 80%;
+        top: 100px;
+        max-width: 100%;
         height: auto;
     }
 }
+
