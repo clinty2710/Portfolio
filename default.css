@@ -13,6 +13,8 @@ Most Code that is commented out is saved for implementation later
 
 	--borderColor:#c1c1c1;
 
+    --titleText: linear-gradient(to bottom, #fffb00, #ff2f00);
+
 	--mainText: white;
 	--secondaryText:white;
 
@@ -321,9 +323,19 @@ body *{
 }
 
 
-h1, h2, h3, h4, h5, h6, strong{
+h2, h3, h4, h5, h6, strong{
 	color: var(--mainText);
 	font-weight: 300;
+}
+
+h1 {
+    /* Use the gradient variable for the background property */
+    background: var(--titleText);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 p, li, span, label, input, textarea{
