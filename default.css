@@ -329,7 +329,6 @@ h2, h3, h4, h5, h6, strong{
 }
 
 h1 {
-    /* Use the gradient variable for the background property */
     background: var(--titleText);
     -webkit-background-clip: text;
     background-clip: text;
