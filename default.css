@@ -13,7 +13,7 @@ Most Code that is commented out is saved for implementation later
 
 	--borderColor:#c1c1c1;
 
-    --titleText: linear-gradient(to bottom, #fffb00, #ff2f00);
+    --titleText: url('images/orangegradient.png');
 
 	--mainText: white;
 	--secondaryText:white;
@@ -330,11 +330,14 @@ h2, h3, h4, h5, h6, strong{
 
 h1 {
     background: var(--titleText);
+    background-size: contain;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    width: auto;
 }
 
 p, li, span, label, input, textarea{
